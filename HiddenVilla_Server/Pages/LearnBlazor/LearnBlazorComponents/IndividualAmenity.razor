@@ -1,0 +1,16 @@
+﻿
+<div class="bg-light border p-2 col-5 offset-1">
+    <h4 class="text-secondary">Amenities - @Amenity.Id</h4>
+
+    @Amenity.Name<br />
+    @Amenity.Description<br />
+
+    <br />
+    <DeleteEditButtons IsAdmin="true"></DeleteEditButtons>
+</div>
+@code {
+    [Parameter]
+    public BlazorAmenities Amenity { get; set; }
+
+
+}

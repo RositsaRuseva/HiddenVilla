@@ -1,0 +1,15 @@
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\DataAcess.deps.json
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\DataAcess.dll
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\ref\DataAcess.dll
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\DataAcess.pdb
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.AssemblyInfoInputs.cache
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.AssemblyInfo.cs
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.csproj.CoreCompileInputs.cache
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.dll
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\ref\DataAcess.dll
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.pdb
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\DataAcess.runtimeconfig.json
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\bin\Debug\net5.0\DataAcess.runtimeconfig.dev.json
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.csprojAssemblyReference.cache
+C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\DataAcess\obj\Debug\net5.0\DataAcess.genruntimeconfig.cache

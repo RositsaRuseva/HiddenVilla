@@ -1,0 +1,18 @@
+﻿@page "/ParentComponent"
+
+<h3 class="text-danger">Parent Child Component</h3>
+<ChildComponent Title="This is a second child component">
+
+</ChildComponent>
+<AnotherChildComponent InputAttributes="InputAttributesFromParent">
+
+</AnotherChildComponent>
+@code {
+    public Dictionary<string, object> InputAttributesFromParent { get; set; } = new Dictionary<string, object>()
+{
+        { "required", "required"},
+        { "placeholder", "Enter the Room Name from Parent"},
+        { "maxLength", 5}
+    };
+
+}
