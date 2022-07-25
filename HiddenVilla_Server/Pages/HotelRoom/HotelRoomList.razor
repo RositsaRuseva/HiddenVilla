@@ -2,6 +2,7 @@
 @using Models
 @using Business.Repository.IRepository
 @inject IHotelRoomRepository HotelRoomRepository
+@inject IJSRuntime JsRuntime
 <h3>HotelRoomList</h3>
 <div class="row mt-4">
     <div class="col-8">
@@ -53,11 +54,18 @@
         </table>
     </div>
 </div>
+
+<DeleteConfirmation></DeleteConfirmation>
 @code {
     private IEnumerable<HotelRoomDto> HotelRooms { get; set; } = new List<HotelRoomDto>();
 
     protected override async Task OnInitializedAsync()
     {
         HotelRooms = await HotelRoomRepository.GetAllHotelRoom();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("ShowDeleteConfirmationModal");
     }
 }
