@@ -42,6 +42,7 @@ namespace HiddenVilla_Server
             services.AddScoped<IHotelImagesRepository, HotelImagesRepository>();
             services.AddScoped<IFileUpload,FileUpload>();
             services.AddRazorPages();
+            services.AddHttpContextAccessor();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
         }
