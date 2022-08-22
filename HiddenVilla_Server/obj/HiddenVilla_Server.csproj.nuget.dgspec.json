@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj": {}
+    "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\Business.csproj": {
+    "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\obj\\",
+        "outputPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -31,14 +31,14 @@
           "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
-                "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj"
+              "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
+                "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj"
               },
-              "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj"
+              "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj"
               }
             }
           }
@@ -50,8 +50,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -73,18 +73,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
+    "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj",
+        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj",
         "projectName": "DataAcess",
-        "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj",
+        "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj",
         "packagesPath": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\obj\\",
+        "outputPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,7 +95,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -104,8 +104,8 @@
           "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -116,22 +116,42 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             }
           },
           "imports": [
@@ -149,18 +169,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj": {
+    "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj",
+        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj",
         "projectName": "HiddenVilla_Server",
-        "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj",
+        "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Server\\HiddenVilla_Server.csproj",
         "packagesPath": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\HiddenVilla_Server\\obj\\",
+        "outputPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -171,7 +191,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -180,17 +200,17 @@
           "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Business\\Business.csproj"
+              "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj"
               },
-              "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
-                "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\DataAcess\\DataAcess.csproj"
+              "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
+                "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj"
               },
-              "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj"
+              "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj"
               }
             }
           }
@@ -202,8 +222,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -213,15 +233,27 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "Blazored.TextEditor": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -231,7 +263,15 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [
@@ -252,18 +292,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj": {
+    "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rositsa Ruseva\\source\\repos\\HiddenVilla\\Models\\obj\\",
+        "outputPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -274,7 +314,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -283,8 +323,8 @@
           "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -295,8 +335,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -312,7 +352,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

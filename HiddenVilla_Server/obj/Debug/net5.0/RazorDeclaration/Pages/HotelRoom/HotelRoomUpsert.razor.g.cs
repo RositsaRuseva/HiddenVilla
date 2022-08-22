@@ -13,112 +13,119 @@ namespace HiddenVilla_Server.Pages.HotelRoom
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 1 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 2 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 3 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 4 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 5 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 6 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 7 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 8 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 9 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using HiddenVilla_Server;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 10 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using HiddenVilla_Server.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 11 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using HiddenVilla_Server.Pages.LearnBlazor.LearnBlazorComponents;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 12 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using HiddenVilla_Server.Model;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+#line 13 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
 using HiddenVilla_Server.Helper;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
+#line 14 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\_Imports.razor"
+using Blazored.TextEditor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
 using Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
+#line 4 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
 using Business.Repository.IRepository;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
+#line 5 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
 using HiddenVilla_Server.Service.IService;
 
 #line default
@@ -134,13 +141,19 @@ using HiddenVilla_Server.Service.IService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 52 "C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
+#line 118 "C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\Pages\HotelRoom\HotelRoomUpsert.razor"
        
 
     [Parameter]
     public int? Id { get; set; }
     private HotelRoomDto HotelRoomModel { get; set; } = new HotelRoomDto();
     private string Title { get; set; } = "Create";
+    private HotelRoomImageDTO RoomImage { get; set; } = new HotelRoomImageDTO();
+    private List<string> DeletedImageNames { get; set; } = new List<string>();
+    public BlazoredTextEditor QuillHtml { get; set; } = new BlazoredTextEditor();
+
+    private bool IsImageUploadProcessStarted { get; set; } = false;
+
 
     protected override async Task OnInitializedAsync() // for updating the hotel room
     {
@@ -148,16 +161,49 @@ using HiddenVilla_Server.Service.IService;
         {
             Title = "Update";
             HotelRoomModel = await HotelRoomRepository.GetHotelRoom(Id.Value);
+            if (HotelRoomModel?.HotelRoomImages != null)
+            {
+                HotelRoomModel.ImageUrls = HotelRoomModel.HotelRoomImages.Select(u => u.RoomImageUrl).ToList();
+            }
         }
         else
         {
+            //create
             HotelRoomModel = new HotelRoomDto();
         }
 
     }
 
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            return;
+
+        }
+        bool loading = true;
+        while (loading)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(HotelRoomModel.Details))
+                {
+                    await this.QuillHtml.LoadHTMLContent(HotelRoomModel.Details);
+                }
+                loading = false;
+            }
+            catch
+            {
+                await Task.Delay(10);
+                loading = true;
+            }
+        }
+    }
+
+
     private async Task HandleHotelRoomUpsert()
     {
+        IsImageUploadProcessStarted = true;
         try
         {
             var roomDetailsByName = await HotelRoomRepository.IsRoomUnique(HotelRoomModel.Name, HotelRoomModel.Id);
@@ -173,13 +219,35 @@ using HiddenVilla_Server.Service.IService;
             }
             if (HotelRoomModel.Id != 0 && Title == "Update")
             {
+                HotelRoomModel.Details = await QuillHtml.GetHTML();
+                //update
                 var updateRoomResult = await HotelRoomRepository.UpdateHotelRoom(HotelRoomModel.Id, HotelRoomModel);
+                if (HotelRoomModel.ImageUrls != null && HotelRoomModel.ImageUrls.Any()
+                    || (DeletedImageNames != null && DeletedImageNames.Any()))
+                {
+                    if (DeletedImageNames != null && DeletedImageNames.Any())
+                    {
+                        foreach (var deletedImageName in DeletedImageNames)
+                        {
+                            var imageName = deletedImageName.Replace($"{NavigationManager.BaseUri}RoomImages/", "");
+                            var result = FileUpload.DeleteFile(imageName);
+                            await HotelImageRepository.DeleteHotelRoomImageByImageUrl(deletedImageName);
+                        }
+                    }
+                    await AddHotelRoomImage(updateRoomResult);
+                }
                 await JsRuntime.InvokeVoidAsync("ShowSweetAlert", "success", "Task completed successfully!");
             }
             else
             {
+                HotelRoomModel.Details = await QuillHtml.GetHTML();
+                //create
+                HotelRoomModel.Details = await QuillHtml.GetHTML();
                 var createdResult = await HotelRoomRepository.CreateHotelRoom(HotelRoomModel);
+                await AddHotelRoomImage(createdResult);
+                await JsRuntime.ToastrSuccess("Hotel room create successfully.");
             }
+            IsImageUploadProcessStarted = false;
         }
         catch(Exception ex)
         {
@@ -237,14 +305,56 @@ using HiddenVilla_Server.Service.IService;
         {
             await JsRuntime.ToastrError(ex.Message);
         }
+
+
+    }
+    private async Task AddHotelRoomImage(HotelRoomDto roomDetails)
+    {
+        foreach (var imageUrl in HotelRoomModel.ImageUrls)
+        {
+            if (HotelRoomModel.HotelRoomImages == null || HotelRoomModel.HotelRoomImages.Where(x => x.RoomImageUrl == imageUrl).Count() == 0)
+            {
+
+                RoomImage = new HotelRoomImageDTO()
+                {
+                    RoomId = roomDetails.Id,
+                    RoomImageUrl = imageUrl
+                };
+                await HotelImageRepository.CreateHotelRoomImage(RoomImage);
+            }
+        }
+    }
+    internal async Task DeletePhoto(string imageUrl)
+    {
+        try
+        {
+            var imageIndex = HotelRoomModel.ImageUrls.FindIndex(x => x == imageUrl);
+            var imageName = imageUrl.Replace($"{NavigationManager.BaseUri}RoomImages/", "");
+            if (HotelRoomModel.Id == 0 && Title == "Create")
+            {
+                var result = FileUpload.DeleteFile(imageName);
+            }
+            else
+            {
+                //update
+                DeletedImageNames ??= new List<string>();
+                DeletedImageNames.Add(imageUrl);
+            }
+            HotelRoomModel.ImageUrls.RemoveAt(imageIndex);
+        }
+        catch(Exception ex)
+        {
+            await JsRuntime.ToastrError(ex.Message);
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IFileUpload FileUpload { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHotelImagesRepository HotelImageRepository { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IHotelRoomRepository HotelRoomRepository { get; set; }
     }
 }

@@ -17,6 +17,9 @@ using Business.Repository;
 using Business.Repository.IRepository;
 using HiddenVilla_Server.Service.IService;
 using HiddenVilla_Server.Service;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity;
+using IdentityRole = Microsoft.AspNet.Identity.EntityFramework.IdentityRole;
 
 namespace HiddenVilla_Server
 {
@@ -33,11 +36,15 @@ namespace HiddenVilla_Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+          
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(ServiceLifetime.Scoped);
+           // services.AddIdentity<Microsoft.AspNetCore.Identity.IdentityUser, Microsoft.AspNetCore.Identity.IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext2>().AddDefaultTokenProviders().AddDefaultUI();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddScoped<IHotelRoomRepository, HotelRoomRepository>();
+            services.AddTransient<IHotelRoomRepository, HotelRoomRepository>();
+            //services.AddTransient<IMapper, Mapper>();
             services.AddScoped<IHotelAmenityRepository, HotelAmenityRepository>();
             services.AddScoped<IHotelImagesRepository, HotelImagesRepository>();
             services.AddScoped<IFileUpload,FileUpload>();
@@ -63,11 +70,13 @@ namespace HiddenVilla_Server
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });

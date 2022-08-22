@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\Rositsa Ruseva\source\repos\HiddenVilla\HiddenVilla_Server\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Server\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Blazored.TextEditor" Path="C:\Users\Rositsa Ruseva\.nuget\packages\blazored.texteditor\1.0.8\build\..\staticwebassets\" />
 </StaticWebAssets>
