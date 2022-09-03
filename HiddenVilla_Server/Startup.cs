@@ -45,6 +45,7 @@ namespace HiddenVilla_Server
             services.AddTransient<IHotelRoomRepository, HotelRoomRepository>();
             services.AddTransient<IMapper, Mapper>();
             services.AddScoped<IHotelAmenityRepository, HotelAmenityRepository>();
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddScoped<IHotelImagesRepository, HotelImagesRepository>();
             services.AddScoped<IFileUpload,FileUpload>();
             services.AddRazorPages();
@@ -54,7 +55,7 @@ namespace HiddenVilla_Server
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -72,6 +73,7 @@ namespace HiddenVilla_Server
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            dbInitializer.Initialize();
 
             app.UseEndpoints(endpoints =>
             {
