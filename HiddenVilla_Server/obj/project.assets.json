@@ -3716,6 +3716,16 @@
           "bin/placeholder/Business.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "DataAcess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -11054,6 +11064,11 @@
       "path": "../Business/Business.csproj",
       "msbuildProject": "../Business/Business.csproj"
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "DataAcess/1.0.0": {
       "type": "project",
       "path": "../DataAcess/DataAcess.csproj",
@@ -11071,6 +11086,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Blazored.TextEditor >= 1.0.8",
       "Business >= 1.0.0",
+      "Common >= 1.0.0",
       "DataAcess >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.7",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.7",
@@ -11118,6 +11134,9 @@
           "projectReferences": {
             "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Business\\Business.csproj"
+            },
+            "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Common\\Common.csproj"
             },
             "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj": {
               "projectPath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\DataAcess\\DataAcess.csproj"
