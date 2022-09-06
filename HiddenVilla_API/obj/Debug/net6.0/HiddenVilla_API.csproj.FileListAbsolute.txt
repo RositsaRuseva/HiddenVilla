@@ -138,3 +138,5 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Models.pdb
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Humanizer.dll
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Common.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Common.pdb

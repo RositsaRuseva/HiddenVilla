@@ -1,7 +1,9 @@
-﻿using DataAcess.Data;
+﻿using Common;
+using DataAcess.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 
 namespace HiddenVilla_API.Controllers
 {
@@ -20,6 +22,46 @@ namespace HiddenVilla_API.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager = roleManager;
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> SignUp([FromBody]UserRequestDto userRequestDto)
+        {
+            if(userRequestDto == null || !ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            var user = new ApplicationUser
+            {
+                UserName = userRequestDto.Email,
+                Email = userRequestDto.Email,
+                Name = userRequestDto.Name,
+                PhoneNumber = userRequestDto.PhoneNumber,
+                EmailConfirmed = true
+            };
+
+            var result = await _userManager.CreateAsync(user, userRequestDto.Password);
+            if(!result.Succeeded)
+            {
+                var errors = result.Errors.Select(e => e.Description);
+                return BadRequest(new RegistrationResponseDto
+                {
+                    Errors = errors,
+                    IsRegistrationSuccessful = false
+                });
+               
+            }
+            var roleResult = await _userManager.AddToRoleAsync(user, SD.Role_Customer);
+            if (!roleResult.Succeeded)
+            {
+                var errors = result.Errors.Select(e => e.Description);
+                return BadRequest(new RegistrationResponseDto
+                {
+                    Errors = errors,
+                    IsRegistrationSuccessful = false
+                });
+            }
+            return StatusCode(201);
         }
     }
 }
