@@ -1,9 +1,15 @@
 ﻿using Common;
 using DataAcess.Data;
+using HiddenVilla_API.Helper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Models;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace HiddenVilla_API.Controllers
 {
@@ -15,13 +21,16 @@ namespace HiddenVilla_API.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly APISettings _APISettings;
 
         public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            IOptions<APISettings> options)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _roleManager = roleManager;
+            _APISettings = options.Value;
         }
         [HttpPost]
         [AllowAnonymous]
@@ -81,8 +90,60 @@ namespace HiddenVilla_API.Controllers
                         ErrorMessage = "Invalid Authentication"
                     });
                 }
+                var signInCredentials = GetSigningCredentials();
+                var claims = await GetClaims(user);
 
+                var tokenOptions = new JwtSecurityToken(
+                    issuer: _APISettings.ValidIssuer,
+                    audience: _APISettings.ValidAudience,
+                    claims: claims,
+                    expires: DateTime.Now.AddDays(30),
+                    signingCredentials: signInCredentials);
+                var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+
+                return Ok(new AuthenticationResponseDto
+                {
+                    IsAuthenticationSuccessful = true,
+                    Token = token,
+                    UserDto = new UserDto
+                    {
+                        Name = user.Name,
+                        Id = user.Id,
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
+                    }
+                });
             }
+            else
+            {
+                return Unauthorized(new AuthenticationResponseDto
+                {
+                    IsAuthenticationSuccessful = false,
+                    ErrorMessage = "Invalid Authentication"
+                });
+            }
+        }
+
+        private SigningCredentials GetSigningCredentials()
+        {
+            var secret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_APISettings.SecretKey));
+            return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
+        }
+
+        private async Task<List<Claim>> GetClaims(ApplicationUser user)
+        {
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, user.Email),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim("Id", user.Id),
+            };
+            var roles = await _userManager.GetRolesAsync(await _userManager.FindByEmailAsync(user.Email));
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            return claims;
         }
     }
 }
