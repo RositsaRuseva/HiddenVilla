@@ -63,5 +63,26 @@ namespace HiddenVilla_API.Controllers
             }
             return StatusCode(201);
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> SignIn([FromBody] AuthenticationDto authenticationDto)
+        {
+            var result = await _signInManager.PasswordSignInAsync(authenticationDto.Username,
+                authenticationDto.Password, false, false);
+            if (result.Succeeded)
+            {
+                var user = await _userManager.FindByNameAsync(authenticationDto.Username);
+                if (user == null)
+                {
+                    return Unauthorized(new AuthenticationResponseDto
+                    {
+                        IsAuthenticationSuccessful = false,
+                        ErrorMessage = "Invalid Authentication"
+                    });
+                }
+
+            }
+        }
     }
 }
