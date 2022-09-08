@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json.Serialization;
 using System.Configuration;
 using System.Text;
 
@@ -50,8 +51,19 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IHotelRoomRepository, HotelRoomRepository>();
 builder.Services.AddScoped<IHotelAmenityRepository, HotelAmenityRepository>();
 builder.Services.AddScoped<IHotelImagesRepository, HotelImagesRepository>();
+
+builder.Services.AddCors(o => o.AddPolicy("HiddenVilla", x =>
+  {
+      x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+  }));
+
 builder.Services.AddRouting(option => option.LowercaseUrls = true);
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null).
+    AddNewtonsoftJson(opt =>
+    {
+        opt.SerializerSettings.ContractResolver = new DefaultContractResolver();
+        opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -72,6 +84,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("HiddenVilla");
 
 app.UseRouting();
 
