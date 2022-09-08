@@ -2,11 +2,14 @@ using Business.Repository;
 using Business.Repository.IRepository;
 using DataAcess.Data;
 using HiddenVilla_API.Helper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.PlatformAbstractions;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Configuration;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,30 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 
 var appSettingsSection = builder.Configuration.GetSection("APISettings");
 builder.Services.Configure<APISettings>(appSettingsSection);
+
+var apiSettings = appSettingsSection.Get<APISettings>();
+var key = Encoding.ASCII.GetBytes(apiSettings.SecretKey);
+
+builder.Services.AddAuthentication(option =>
+{
+    option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidAudience = apiSettings.ValidAudience,
+        ValidIssuer = apiSettings.ValidIssuer,
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IHotelRoomRepository, HotelRoomRepository>();
