@@ -1,9 +1,13 @@
 ﻿using Business.Repository.IRepository;
+using Common;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
 namespace HiddenVilla_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class HotelRoomController : ControllerBase
@@ -18,6 +22,8 @@ namespace HiddenVilla_API.Controllers
         /// Gets All hotel rooms
         /// </summary>
         /// <returns></returns>
+        /// 
+        [Authorize(Roles =  SD.Role_Admin)]
         [HttpGet]
         public async Task<IActionResult> GetHotelRooms()
         {
