@@ -1,0 +1,17 @@
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\Business.deps.json
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\Business.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\ref\Business.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\Business.pdb
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\DataAcess.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\Models.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\DataAcess.pdb
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\bin\Debug\net6.0\Models.pdb
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.csproj.AssemblyReference.cache
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.AssemblyInfoInputs.cache
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.AssemblyInfo.cs
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.csproj.CopyComplete
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\Business\obj\Debug\net6.0\Business.pdb
