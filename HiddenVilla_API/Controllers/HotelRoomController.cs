@@ -7,7 +7,7 @@ using Models;
 
 namespace HiddenVilla_API.Controllers
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class HotelRoomController : ControllerBase
@@ -23,7 +23,7 @@ namespace HiddenVilla_API.Controllers
         /// </summary>
         /// <returns></returns>
         /// 
-        [Authorize(Roles =  SD.Role_Admin)]
+        //[Authorize(Roles =  SD.Role_Admin)]
         [HttpGet]
         public async Task<IActionResult> GetHotelRooms()
         {
