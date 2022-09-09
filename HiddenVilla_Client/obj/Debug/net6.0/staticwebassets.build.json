@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/0LevykM05WLgUzdbpgKVOfL8GeY/M4q5ClChPZLwnU=",
+  "Hash": "H8sdv2rezlTAWfmIrWzejLQDRHIlHmLsSsg03pAyxkA=",
   "Source": "HiddenVilla_Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7087,6 +7087,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\js\\common.js",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/common.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\common.js"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\sample-data\\weather.json",
