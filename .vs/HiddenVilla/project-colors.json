@@ -35,7 +35,12 @@
       "ProjectGuid": "5d4d392f-f5f5-4fd1-85b9-845bbb64c359",
       "DisplayName": "Models",
       "ColorIndex": 5
+    },
+    "3fdb9a2d-cb4a-49b1-9922-6f0659ea278e": {
+      "ProjectGuid": "3fdb9a2d-cb4a-49b1-9922-6f0659ea278e",
+      "DisplayName": "HiddenVilla_Client",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }
