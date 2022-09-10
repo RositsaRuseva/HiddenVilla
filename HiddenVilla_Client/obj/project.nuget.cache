@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "98Oa+bDXSmNkw63n2544Tc4UZUbFVXgLAxYoGfYg7ligc9Kmz1SbpcYZZOOvNwYOkZiTirittIWQFpDG2kfHvw==",
+  "dgSpecHash": "nuBxRfRAyGXAYsK28C/BHtE7+SyH7y/O3f9e9wfvEsQ5sOaA5JLc3AFVkzT3XI6BpXsMfktqkx+p71AD3cFu1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\HiddenVilla_Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
     "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.7\\microsoft.aspnetcore.authorization.6.0.7.nupkg.sha512",
     "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.7\\microsoft.aspnetcore.components.6.0.7.nupkg.sha512",
     "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.7\\microsoft.aspnetcore.components.analyzers.6.0.7.nupkg.sha512",
