@@ -36,20 +36,20 @@ namespace HiddenVilla_API.Controllers
                     ErrorMessage = "All parameters need to be supplied"
                 });
             }
-            if (!DateTime.TryParseExact(checkInDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckInDate))
+            if (!DateTime.TryParseExact(checkInDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckInDate))
             {
                 return BadRequest(new ErrorModel()
                 {
                     StatusCode = StatusCodes.Status400BadRequest,
-                    ErrorMessage = "Invalid CheckIn date format. valid format will be MM/dd/yyyy"
+                    ErrorMessage = "Invalid CheckIn date format. valid format will be dd/MM/yyyy"
                 });
             }
-            if (!DateTime.TryParseExact(checkOutDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckOutDate))
+            if (!DateTime.TryParseExact(checkOutDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckOutDate))
             {
                 return BadRequest(new ErrorModel()
                 {
                     StatusCode = StatusCodes.Status400BadRequest,
-                    ErrorMessage = "Invalid CheckOut date format. valid format will be MM/dd/yyyy"
+                    ErrorMessage = "Invalid CheckOut date format. valid format will be dd/MM/yyyy"
                 });
             }
 
@@ -68,7 +68,31 @@ namespace HiddenVilla_API.Controllers
                     StatusCode = StatusCodes.Status400BadRequest
                 });
             }
-            var roomDetails = await _hotelRoomRepository.GetHotelRoom(roomId.Value);
+            if (string.IsNullOrEmpty(checkInDate) || string.IsNullOrEmpty(checkOutDate))
+            {
+                return BadRequest(new ErrorModel()
+                {
+                    StatusCode = StatusCodes.Status400BadRequest,
+                    ErrorMessage = "All parameters need to be supplied"
+                });
+            }
+            if (!DateTime.TryParseExact(checkInDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckInDate))
+            {
+                return BadRequest(new ErrorModel()
+                {
+                    StatusCode = StatusCodes.Status400BadRequest,
+                    ErrorMessage = "Invalid CheckIn date format. valid format will be dd/MM/yyyy"
+                });
+            }
+            if (!DateTime.TryParseExact(checkOutDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var dtCheckOutDate))
+            {
+                return BadRequest(new ErrorModel()
+                {
+                    StatusCode = StatusCodes.Status400BadRequest,
+                    ErrorMessage = "Invalid CheckOut date format. valid format will be dd/MM/yyyy"
+                });
+            }
+            var roomDetails = await _hotelRoomRepository.GetHotelRoom(roomId.Value, checkInDate, checkOutDate);
             if (roomDetails == null)
             {
                 return BadRequest(new ErrorModel()
