@@ -813,3 +813,7 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVi
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVilla_Client.dll
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\ref\HiddenVilla_Client.dll
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVilla_Client.pdb
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\nbQ1KyVk.gz

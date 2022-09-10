@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-6RRoYeDP3d0xabXmcCMF66wXeJlXVPem28Trs8sQiis=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-hSXzdQFPBtfxBs3B2TFaykHyx2Mgqh21anN\/Gx+VKSo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-BikLdQx36rYsSVwqNFVsuDwW4Soedlr\/SnAFSy5tjW8=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-92y2h3G1nlPZuHI7ZX3WI+lOUF3ipefJgi4gLswtgeQ=",
@@ -196,13 +197,13 @@
       "mscorlib.dll": "sha256-wmk56X5dbt29rrFZKEFpOFjotkZA+JSxA4fqkgmBsOU=",
       "netstandard.dll": "sha256-CvlfDmNgFRYT7l\/xZKu91FlbTFyLG\/5cH7YX63k9ghE=",
       "System.Private.CoreLib.dll": "sha256-aF4imeOpA59D6F5qCLabzkeY7MvRZzNYzavhB\/bdxvM=",
-      "HiddenVilla_Client.dll": "sha256-pA9nvovAOzs4uPgf1rOXK0QLzsND5839vATkVRXAHQw="
+      "HiddenVilla_Client.dll": "sha256-zqp6iod\/vjcXcy9r5aGz3VX9ItpGj1\/92J6Xr8l67fE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "HiddenVilla_Client.pdb": "sha256-jCWGgRnJ9tK\/oDYFOK6MDLLNJy5on5seUwmi6b1sBls="
+      "HiddenVilla_Client.pdb": "sha256-DYPCS2JPjoHqRj0w19l5x9iIiEsZYOU06fEhCqkio\/g="
     },
     "runtime": {
       "dotnet.6.0.7.zjnmnqdjfd.js": "sha256-pvJcJ6jtDSfxgXm03QYRTm4aAi9PSzMSJODReHtvASY=",

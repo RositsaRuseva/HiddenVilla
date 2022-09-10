@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g1g2Pg7mcJVVf1I7O919pUgXQf0huPkgaMgUc026QgQ=",
+  "Hash": "ryJj96UIWS/uqPcdUs10gxK+dr0eWIxe0Z2dW8XvNTw=",
   "Source": "HiddenVilla_Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.7\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.7.zjnmnqdjfd.js",
@@ -5404,6 +5421,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WindowsBase.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\nbQ1KyVk.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\nddmaQyv.gz",
