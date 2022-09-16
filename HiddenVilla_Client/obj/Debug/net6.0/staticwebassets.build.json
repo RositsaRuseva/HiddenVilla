@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ryJj96UIWS/uqPcdUs10gxK+dr0eWIxe0Z2dW8XvNTw=",
+  "Hash": "kOaIRorjSWrbrQmblCZEY4RYJ+5+xd6umfqVvpXQD5c=",
   "Source": "HiddenVilla_Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.dll",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Common.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Common\\bin\\Debug\\net6.0\\Common.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.pdb",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Common.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Common\\bin\\Debug\\net6.0\\Common.pdb"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.7.zjnmnqdjfd.js",
@@ -680,6 +714,40 @@
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.7\\runtimes\\browser-wasm\\lib\\net6.0\\Microsoft.Win32.Registry.dll"
     },
     {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\bin\\Debug\\net6.0\\Models.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\Models\\bin\\Debug\\net6.0\\Models.pdb"
+    },
+    {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\mscorlib.dll",
       "SourceId": "HiddenVilla_Client",
       "SourceType": "Computed",
@@ -712,6 +780,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.7\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib\\netstandard2.0\\Newtonsoft.Json.dll"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -3434,6 +3519,23 @@
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.7\\runtimes\\browser-wasm\\lib\\net6.0\\WindowsBase.dll"
     },
     {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\+5JcI2jV.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.pdb"
+    },
+    {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\+DPSW0qg.gz",
       "SourceId": "HiddenVilla_Client",
       "SourceType": "Computed",
@@ -3672,6 +3774,23 @@
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.ReaderWriter.dll"
     },
     {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\0ZTFeyz7.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Models.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Models.dll"
+    },
+    {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\1fvJJ+vP.gz",
       "SourceId": "HiddenVilla_Client",
       "SourceType": "Computed",
@@ -3772,6 +3891,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\3imuLSZN.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Common.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.pdb"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\4CVJG5Lq.gz",
@@ -4452,6 +4588,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.Writer.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\Em4c3hY6.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Common.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Common.dll"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\EPph3IeO.gz",
@@ -6290,6 +6443,23 @@
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.MemoryMappedFiles.dll"
     },
     {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\V9CVnRvy.gz",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Newtonsoft.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll"
+    },
+    {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\build-gz\\vD0beSB4.gz",
       "SourceId": "HiddenVilla_Client",
       "SourceType": "Computed",
@@ -6868,6 +7038,23 @@
       "OriginalItemSpec": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HiddenVilla_Client.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\appsettings.json",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "appsettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "settings",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\appsettings.json"
+    },
+    {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\css\\app.css",
       "SourceId": "HiddenVilla_Client",
       "SourceType": "Discovered",
@@ -7104,6 +7291,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-192.png"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\images\\ajax-loader.gif",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/ajax-loader.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ajax-loader.gif"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\images\\confirmation.jpg",

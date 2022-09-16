@@ -1,6 +1,7 @@
 ﻿@page "/hotel/rooms"
 @inject ILocalStorageService localStorage
-@inject JSRuntime jsRuntime
+@inject IJSRuntime jsRuntime
+@inject IHotelRoomService hotelRoomService
 
 <h3>HotelRooms</h3>
 
@@ -21,11 +22,22 @@
                 HomeModel.NumberOfNights = 1;
             }
             await LoadRooms();
+            StateHasChanged();
         }
         catch (Exception ex)
         {
             await jsRuntime.ToastrError(ex.Message);
+            
         }
+    }
+    //protected override async Task StateHasChanged()
+    //{
+    //    Exception ex;
+    //    await jsRuntime.ToastrError(ex.Message);
+    //}
+    private async Task LoadRooms()
+    {
+        Rooms = await hotelRoomService.GetHotelRooms(HomeModel.StartDate.ToString("dd/MM/yyyy"), HomeModel.EndDate.ToString("dd/MM/yyyy"));
     }
 
 }
