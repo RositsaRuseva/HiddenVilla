@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label>Check In Date</label>
                 @*<input type="text" class="form-control" />*@
-                <InputDate min="@DateTime.Now.ToString("dd-MM-yyyy")" @bind-Value="HomeModel.StartDate" class="form-control" />
+                <InputDate min="@DateTime.Now.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)" @bind-Value="HomeModel.StartDate" class="form-control" />
             </div>
         </div>
         <div class="col-8 col-md-3 pl-2 pr-2">
