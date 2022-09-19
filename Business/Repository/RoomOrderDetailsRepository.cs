@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Business.Repository
 {
@@ -72,9 +73,21 @@ namespace Business.Repository
             }
         }
 
-        public Task<bool> IsRoomBooked(int roomId, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<bool> IsRoomBooked(int roomId, DateTime checkInDate, DateTime checkOutDate)
         {
-            throw new NotImplementedException();
+            var status = false;
+            var existingBooking = await _db.RoomOrderDetails.Where(x => x.RoomId == roomId && x.IsPaymentSuccessful &&
+            //check if check in date that user wants does not fall in between any dates for room that is booked
+            (checkInDate<x.CheckOutDate && checkInDate.Date > x.CheckInDate
+            //check if checkout date that the user wantch does not fall in between any dates for room that is booked
+            ||checkOutDate.Date > x.CheckInDate.Date && checkInDate < x.CheckInDate
+            )).FirstOrDefaultAsync();
+
+            if(existingBooking != null)
+            {
+                status = true;
+            }
+            return status;
         }
 
         public Task<RoomOrderDetailsDto> MarkPaymentSuccessful(int id)
