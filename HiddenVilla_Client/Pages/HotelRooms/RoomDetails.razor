@@ -93,7 +93,7 @@ else
                 </div>
                 <div class="form-group">
                     <label class="text-warning">Number of nights</label>
-                    <select class="form-control" value="@NumberOfNights" @onchange="HandleOfNbOfNightsChange">
+                    <select class="form-control" value="@NumberOfNights" @onChange="HandleNbOfNightsChange">
                         @for(var i=1;i<=10;i++)
                         {
                                 @if (i == NumberOfNights)
@@ -161,5 +161,16 @@ else
         {
             await jsRuntime.ToastrError(ex.Message);
         }
+    }
+    private async Task HandleNbOfNightsChange(ChangedEventArgs ev)
+    {
+        NumberOfNights = Convert.ToInt32(ev.NewValue.ToString());
+        HotelBooking.OrderDetails.HotelRoomDto = await hotelService.GetHotelRoomDetails(
+            Id.Value, HotelBooking.OrderDetails.CheckInDate.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture),
+            HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights).ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture));
+
+        HotelBooking.OrderDetails.CheckInDate = HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights);
+        HotelBooking.OrderDetails.HotelRoomDto.TotalDays = NumberOfNights;
+        HotelBooking.OrderDetails.HotelRoomDto.TotalAmount = NumberOfNights * HotelBooking.OrderDetails.HotelRoomDto.RegularRate;
     }
 }
