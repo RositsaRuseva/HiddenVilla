@@ -1,5 +1,15 @@
 ﻿@page "/hotel/room-details/{Id:int}"
+@inject IJSRuntime jsRuntime
+@inject ILocalStorageService localStorage
+@inject IHotelRoomService hotelService
 
+@*//TODO: add if statement to check if HotelBooking is populated*@
+@if(HotelBooking?.OrderDetails?.HotelRoomDto?.HotelRoomImages == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
 <div class="mt-4 mx-4 px-0 px-md-5 mx-md-5">
     <div class="row p-2 my-3" style="border-radius:20px;">
         <div class="col-12 col-lg-7 p-4" style="border:1px solid #fff">
@@ -34,18 +44,22 @@
                 </div>
                 <div class="col-6">
                     <span class="float-right pt-4">
-                        <span class="float-right">Max Occupancy: XXXX adults</span><br />
-                        <span class="float-right pt-1">Villa Size: XXXX sqft</span><br />
-                        <h4 class="text-warning font-weight-bold pt-5">USD <span style="border-bottom:1px solid #ff6a00">XXXX</span></h4>
-                        <span class="float-right">Cost for XXXX nights</span>
+                        <span class="float-right">Max Occupancy: @HotelBooking.OrderDetails.HotelRoomDto.Occupancy adults</span><br />
+                        <span class="float-right pt-1">Villa Size: @HotelBooking.OrderDetails.HotelRoomDto.SqFt sqft</span><br />
+                        <h4 class="text-warning font-weight-bold pt-5">USD 
+                            <span style="border-bottom:1px solid #ff6a00">
+                                @HotelBooking.OrderDetails.HotelRoomDto.TotalAmount.ToString("#,#.00#;(#,#.00#)");
+                            </span>
+                        </h4>
+                        <span class="float-right">Cost for @HotelBooking.OrderDetails.HotelRoomDto.TotalDays nights</span>
                     </span>
                 </div>
             </div>
             <div class="row p-2">
                 <div class="col-12">
-                    <p class="card-title text-warning" style="font-size:xx-large">XX NAME XX</p>
+                    <p class="card-title text-warning" style="font-size:xx-large">@HotelBooking.OrderDetails.HotelRoomDto.Name</p>
                     <p class="card-text" style="font-size:large">
-                        XX DETAILS XX
+                       @((MarkupString)@HotelBooking.OrderDetails.HotelRoomDto.Details)
                     </p>
                 </div>
             </div>
@@ -95,8 +109,50 @@
 
     </div>
 </div>
+}
 
 @code {
     [Parameter]
     public int? Id { get; set; }
+    public HotelRoomBookingVM HotelBooking { get; set; } = new HotelRoomBookingVM();
+    private int NumberOfNights { get; set; } = 1;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            HotelBooking.OrderDetails = new RoomOrderDetailsDto();
+            if(Id != null)
+            {
+                if(await localStorage.GetItemAsync<HomeViewModel>(SD.Local_InitialBooking) != null)
+                {
+                    var roomInitialInfo = await localStorage.GetItemAsync<HomeViewModel>(SD.Local_InitialBooking);
+                    HotelBooking.OrderDetails.HotelRoomDto = await hotelService.GetHotelRoomDetails(
+                    Id.Value,roomInitialInfo.StartDate.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture),
+                    roomInitialInfo.EndDate.ToString("dd/MM/yyyy",System.Globalization.CultureInfo.InvariantCulture));
+                    NumberOfNights = roomInitialInfo.NumberOfNights;
+                    HotelBooking.OrderDetails.CheckInDate = roomInitialInfo.StartDate;
+                    HotelBooking.OrderDetails.CheckOutDate = roomInitialInfo.EndDate;
+                    HotelBooking.OrderDetails.HotelRoomDto.TotalDays = roomInitialInfo.NumberOfNights;
+                    HotelBooking.OrderDetails.HotelRoomDto.TotalAmount =
+                    roomInitialInfo.NumberOfNights * HotelBooking.OrderDetails.HotelRoomDto.RegularRate;
+                }
+                else
+                {
+                    HotelBooking.OrderDetails.HotelRoomDto = await hotelService.GetHotelRoomDetails(
+                    Id.Value, DateTime.Now.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture),
+                    DateTime.Now.AddDays(1).ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture));
+                    NumberOfNights = 1;
+                    HotelBooking.OrderDetails.CheckInDate = DateTime.Now;
+                    HotelBooking.OrderDetails.CheckOutDate = DateTime.Now.AddDays(1);
+                    HotelBooking.OrderDetails.HotelRoomDto.TotalDays = 1;
+                    HotelBooking.OrderDetails.HotelRoomDto.TotalAmount =
+                    HotelBooking.OrderDetails.HotelRoomDto.RegularRate;
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            await jsRuntime.ToastrError(ex.Message);
+        }
+    }
 }

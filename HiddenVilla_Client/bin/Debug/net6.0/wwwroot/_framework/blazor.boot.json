@@ -206,7 +206,7 @@
       "System.Private.CoreLib.dll": "sha256-aF4imeOpA59D6F5qCLabzkeY7MvRZzNYzavhB\/bdxvM=",
       "Common.dll": "sha256-Y3857AxfP4nXml9m4x0yzUljJUTDoWwR6qlG+HZnygs=",
       "Models.dll": "sha256-WQRRbBcmVcSyVu+7euvX2m12XPeL3SKgd1uQ7i+t+1I=",
-      "HiddenVilla_Client.dll": "sha256-SC2TjN2Cy0sTw5VYBY6+2dYQe8jrBfMtOshoUE4FKTE="
+      "HiddenVilla_Client.dll": "sha256-7ShVK\/Wy3Qk0Hw\/axb7TInafmz9aJiBwdmwq91sJVq4="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -214,7 +214,7 @@
     "pdb": {
       "Common.pdb": "sha256-tkntospFMtNyzmx8mxvUpPRBP2Xo0cZ07zspV\/ut2rU=",
       "Models.pdb": "sha256-C0vKEXoTf3S6u7ehDhDIaCfyEPTCK0Z113npPBvL+HQ=",
-      "HiddenVilla_Client.pdb": "sha256-bH13L8scZcZDB5DYAHL7N+Vb4YBESF+8C4Fpo38QcMc="
+      "HiddenVilla_Client.pdb": "sha256-+719r\/PMjCr05cUEZz9ijhR0fg9g0PNwTh\/1N28xu9Y="
     },
     "runtime": {
       "dotnet.6.0.7.zjnmnqdjfd.js": "sha256-pvJcJ6jtDSfxgXm03QYRTm4aAi9PSzMSJODReHtvASY=",
