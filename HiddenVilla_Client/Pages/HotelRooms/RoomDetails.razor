@@ -173,4 +173,33 @@ else
         HotelBooking.OrderDetails.HotelRoomDto.TotalDays = NumberOfNights;
         HotelBooking.OrderDetails.HotelRoomDto.TotalAmount = NumberOfNights * HotelBooking.OrderDetails.HotelRoomDto.RegularRate;
     }
+
+    private async Task HandleCheckout()
+    {
+        if(!await HandleValidation())
+        {
+            return;
+        }
+
+    }
+    private async Task<bool> HandleValidation()
+    {
+        if(string.IsNullOrEmpty(HotelBooking.OrderDetails.Name))
+        {
+            await jsRuntime.ToastrError("Name cannot be empty");
+            return false;
+        }
+        if(string.IsNullOrEmpty(HotelBooking.OrderDetails.Phone))
+        {
+            await jsRuntime.ToastrError("Phone cannot be empty");
+            return false;
+        }
+        if(string.IsNullOrEmpty(HotelBooking.OrderDetails.Email))
+        {
+            await jsRuntime.ToastrError("Email cannot be empty");
+            return false;
+        }
+        return true;
+
+    }
 }
