@@ -145,3 +145,4 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_API\bin\Debug\net6.0\Debug\net6.0\Stripe.net.dll
