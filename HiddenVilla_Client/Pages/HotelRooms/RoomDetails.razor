@@ -2,6 +2,8 @@
 @inject IJSRuntime jsRuntime
 @inject ILocalStorageService localStorage
 @inject IHotelRoomService hotelService
+@inject IStripePaymentService stripePayment
+@inject IRoomOrderDetailsService roomOrderService
 
 @*//TODO: add if statement to check if HotelBooking is populated*@
 @if(HotelBooking?.OrderDetails?.HotelRoomDto?.HotelRoomImages == null)
@@ -179,6 +181,26 @@ else
         if(!await HandleValidation())
         {
             return;
+        }
+        try
+        {
+            var paymentDto = new StripePaymentDto()
+                {
+                    Amount = Convert.ToInt32(HotelBooking.OrderDetails.HotelRoomDto.TotalAmount * 100),
+                    ProductName = HotelBooking.OrderDetails.HotelRoomDto.Name,
+                    ReturnUrl = "/hotel/room-details/" + Id
+                };
+            var result = await stripePayment.CheckOut(paymentDto);
+            HotelBooking.OrderDetails.StripeSeccionId = result.Data.ToString();
+            HotelBooking.OrderDetails.RoomId = HotelBooking.OrderDetails.HotelRoomDto.Id;
+            HotelBooking.OrderDetails.TotalCost = HotelBooking.OrderDetails.HotelRoomDto.TotalAmount;
+
+            var roomOrderDetailsSaved = await roomOrderService.SaveRoomOrderDetails(HotelBooking.OrderDetails);
+            await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, roomOrderDetailsSaved);
+        }
+        catch(Exception ex)
+        {
+            jsRuntime.ToastrError(ex.Message);
         }
 
     }

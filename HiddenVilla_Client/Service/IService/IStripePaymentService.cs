@@ -4,6 +4,6 @@ namespace HiddenVilla_Client.Service.IService
 {
     public interface IStripePaymentService
     {
-        public Task<SuccessModel> CheckOut(StripePaymentDto model)
+        public Task<SuccessModel> CheckOut(StripePaymentDto model);
     }
 }

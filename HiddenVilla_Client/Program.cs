@@ -14,4 +14,5 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<IHotelRoomService, HotelRoomService>();
 builder.Services.AddScoped<IRoomOrderDetailsService, RoomOrderDetailsService>();
+builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
 await builder.Build().RunAsync();
