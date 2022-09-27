@@ -197,10 +197,11 @@ else
 
             var roomOrderDetailsSaved = await roomOrderService.SaveRoomOrderDetails(HotelBooking.OrderDetails);
             await localStorage.SetItemAsync(SD.Local_RoomOrderDetails, roomOrderDetailsSaved);
+            await jsRuntime.InvokeVoidAsync("redirectToCheckout", result.Data.ToString());
         }
         catch(Exception ex)
         {
-            jsRuntime.ToastrError(ex.Message);
+            await jsRuntime.ToastrError(ex.Message);
         }
 
     }
