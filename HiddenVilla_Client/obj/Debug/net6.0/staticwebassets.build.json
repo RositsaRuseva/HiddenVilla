@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zJpxSzC9qngsJnHyDzt0tc1NTB23mU0mkP0dRtJwQk0=",
+  "Hash": "/sdb1sPx2PTkCdvZr2YvJokbMaIKvEMV8gOQzl4Myko=",
   "Source": "HiddenVilla_Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7546,6 +7546,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\common.js"
+    },
+    {
+      "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\js\\StripePayment.js",
+      "SourceId": "HiddenVilla_Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/StripePayment.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\StripePayment.js"
     },
     {
       "Identity": "C:\\Users\\Rositsa Ruseva\\HiddenVilla\\HiddenVilla_Client\\wwwroot\\sample-data\\weather.json",

@@ -9,6 +9,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
+using Stripe;
 using System.Configuration;
 using System.Text;
 
@@ -98,6 +99,7 @@ builder.Services.AddMvc();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["ApiKey"];
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger(options => options.SerializeAsV2 = true);
