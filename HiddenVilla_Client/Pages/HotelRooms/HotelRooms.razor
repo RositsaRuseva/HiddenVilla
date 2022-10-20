@@ -3,7 +3,12 @@
 @inject IJSRuntime jsRuntime
 @inject IHotelRoomService hotelRoomService
 
-@if (Rooms != null && Rooms.Any())
+@if (isLoading) // ако зарежда показваме анимацията 
+{
+    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
+        <img src="images/ajax-loader.gif" />
+    </div> 
+} else if (Rooms != null && Rooms.Any()) // когато е приключило зареждането правим другата проверка, както си беше преди това
 {
     <EditForm Model="HomeModel" OnValidSubmit="SaveBookingInfo" class="bg-light">
         <div class="pt-3 pb-2 px-5 mx-1 mx-md-0 bg-secondary">
@@ -110,22 +115,22 @@
 }
 else
 {
+      <p>There is no hotel room</p>
     //Task.WaitAll();
-    <p>There is no hotel room</p>
-    <div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-100px;">
-        <img src="images/ajax-loader.gif" />
-    </div>
+ 
 }
 
 @code {
     private HomeViewModel HomeModel { get; set; } = new HomeViewModel();
     public IEnumerable<HotelRoomDto> Rooms { get; set; } = new List<HotelRoomDto>();
     private bool IsProcessing { get; set; } = false;
+    public bool isLoading { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
+            isLoading = true; //начало на изпълнение на асинхронната функция
             if (await localStorage.GetItemAsync<HomeViewModel>(SD.Local_InitialBooking) != null)
             {
                 HomeModel = await localStorage.GetItemAsync<HomeViewModel>(SD.Local_InitialBooking);
@@ -135,6 +140,9 @@ else
                 HomeModel.NumberOfNights = 1;
             }
             await LoadRooms();
+            //Край
+            isLoading = false;
+            //Казваш че се е сменило състоянието на потребилскяи интерфейс (прерисуваш )
             StateHasChanged();
         }
         catch (Exception ex)

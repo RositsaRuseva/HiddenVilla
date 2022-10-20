@@ -90,9 +90,22 @@ namespace Business.Repository
             return status;
         }
 
-        public Task<RoomOrderDetailsDto> MarkPaymentSuccessful(int id)
+        public async Task<RoomOrderDetailsDto> MarkPaymentSuccessful(int id)
         {
-            throw new NotImplementedException();
+            var data = await _db.RoomOrderDetails.FindAsync(id);
+            if(data != null)
+            {
+                return null;
+            }
+            if(!data.IsPaymentSuccessful)
+            {
+                data.IsPaymentSuccessful = true;
+                data.Status = SD.Status_Booked;
+                var markPaymentSuccessful = _db.RoomOrderDetails.Update(data);
+                await _db.SaveChangesAsync();
+                return _mapper.Map<RoomOrderDetails, RoomOrderDetailsDto>(markPaymentSuccessful.Entity);
+            }
+            return new RoomOrderDetailsDto();
         }
 
         public Task<bool> UpdateOrderStatus(int roomOrderId, string status)

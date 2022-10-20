@@ -13,8 +13,8 @@
 else
 {
 <div class="mt-4 mx-4 px-0 px-md-5 mx-md-5">
-    <div class="row p-2 my-3" style="border-radius:20px;">
-        <div class="col-12 col-lg-7 p-4" style="border:1px solid #fff">
+    <div class="row p-2 my-3" style="border-radius:20px; ">
+        <div class="col-12 col-lg-7 p-4" style="border: 1px solid #fff">
             <div class="row px-2 text-success border-bottom">
                 <div class="col-8 py-1"><p style="font-size:x-large;margin:0px;">Selected Room</p></div>
                 <div class="col-4 p-0"><a href="hotel/rooms" class="btn btn-secondary btn-block">Back to Rooms</a></div>
@@ -30,14 +30,14 @@ else
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100" src="images/slide1.jpg" alt="First slide" />
+                                    <img class="d-block w-100" src="images/slide1.jpg" alt="First slide">
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button">
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button">
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -66,7 +66,7 @@ else
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-5 p-4 mt-4 mt-md-0" style="border:1px solid #fff;">
+        <div class="col-12 col-lg-5 p-4 2 mt-4 mt-md-0" style="border: 1px solid #fff;">
             <EditForm Model="HotelBooking" class="container" OnValidSubmit="HandleCheckout">
                 <div class="row px-2 text-success border-bottom">
                     <div class="col-7 py-1">
@@ -85,30 +85,24 @@ else
                     <label class="text-warning">Email</label>
                     <InputText @bind-Value="HotelBooking.OrderDetails.Email" type="text" class="form-control" />
                 </div>
-                <div class="form-group">
+                 <div class="form-group">
                     <label class="text-warning">Check in Date</label>
-                    <InputDate @bind-Value="HotelBooking.OrderDetails.CheckInDate" type="text" class="form-control" />
+                    <InputDate @bind-Value="CheckInDate" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label class="text-warning">Check out Date</label>
-                    <InputDate @bind-Value="HotelBooking.OrderDetails.CheckOutDate" type="text" class="form-control" />
+                    <InputDate @bind-Value="CheckOutDate" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label class="text-warning">Number of nights</label>
-                    <select class="form-control" value="@NumberOfNights" @onChange="HandleNbOfNightsChange">
-                        @for(var i=1;i<=10;i++)
+                    <select class="form-control" @bind="@NumberOfNights">
+                        @for (var i=1;i<=10;i++)
                         {
-                                @if (i == NumberOfNights)
-                                {
-                                    <option value="@i" selected="selected">@i</option>
-                                }
-                                else
-                                {
-                                    <option value="@i">@i</option>
-                                }
+                                <option value="@i">@i</option>
                             }
                     </select>
                 </div>
+              
                 <div class="form-group">
                     <button type="submit" class="btn btn-success form-control">Checkout Now</button>
                 </div>
@@ -124,7 +118,43 @@ else
     [Parameter]
     public int? Id { get; set; }
     public HotelRoomBookingVM HotelBooking { get; set; } = new HotelRoomBookingVM();
-    private int NumberOfNights { get; set; } = 1;
+    private int _NumbarOfNights = 1;
+    private DateTime CheckInDate
+    {
+        get
+        {
+            return HotelBooking.OrderDetails.CheckInDate;
+        }
+        set
+        {
+            HotelBooking.OrderDetails.CheckInDate = value;
+            HandleStartDateChange();
+        }
+    }
+    private DateTime CheckOutDate
+    {
+        get
+        {
+            return HotelBooking.OrderDetails.CheckOutDate;
+        }
+        set
+        {
+            HotelBooking.OrderDetails.CheckOutDate = value;
+            HandleEndDateChange();
+        }
+    }
+
+    private int NumberOfNights {
+        get
+        {
+            return _NumbarOfNights;
+        } 
+        set
+        {
+            _NumbarOfNights = value;
+            HandleNbOfNightsChange();
+        } 
+    } 
     protected override async Task OnInitializedAsync()
     {
         try
@@ -164,14 +194,20 @@ else
             await jsRuntime.ToastrError(ex.Message);
         }
     }
-    private async Task HandleNbOfNightsChange(ChangedEventArgs ev)
-    {
-        NumberOfNights = Convert.ToInt32(ev.NewValue.ToString());
-        HotelBooking.OrderDetails.HotelRoomDto = await hotelService.GetHotelRoomDetails(
-            Id.Value, HotelBooking.OrderDetails.CheckInDate.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture),
-            HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights).ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture));
 
-        HotelBooking.OrderDetails.CheckInDate = HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights);
+    private async Task HandleStartDateChange()
+    {
+         HotelBooking.OrderDetails.CheckOutDate = HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights);
+    }
+
+    private async Task HandleEndDateChange()
+    {
+         HotelBooking.OrderDetails.CheckInDate = HotelBooking.OrderDetails.CheckOutDate.AddDays(-NumberOfNights);
+    }
+
+    private async Task HandleNbOfNightsChange()
+    {
+        HotelBooking.OrderDetails.CheckOutDate = HotelBooking.OrderDetails.CheckInDate.AddDays(NumberOfNights);
         HotelBooking.OrderDetails.HotelRoomDto.TotalDays = NumberOfNights;
         HotelBooking.OrderDetails.HotelRoomDto.TotalAmount = NumberOfNights * HotelBooking.OrderDetails.HotelRoomDto.RegularRate;
     }
