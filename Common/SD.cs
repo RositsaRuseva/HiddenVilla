@@ -21,5 +21,6 @@ namespace Common
         public const string Status_CheckOut_Completed = "CheckedOut";
         public const string Status_NoShow = "NoShow";
         public const string Status_Cancelled = "Cancelled";
+        public const string Local_Token = "JWT Token";
     }
 }
