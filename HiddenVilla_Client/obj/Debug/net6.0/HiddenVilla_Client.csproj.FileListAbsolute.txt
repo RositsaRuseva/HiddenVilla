@@ -603,12 +603,9 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVi
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVilla_Client.AssemblyInfo.cs
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVilla_Client.csproj.CoreCompileInputs.cache
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\HiddenVilla_Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\QlgKlIVg.gz
-C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\wKID6aSu.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\DmdsOOLr.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\ipvSyMtC.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\vVkK6tDO.gz
-C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\xIcdE1N5.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\KC4pY5dg.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\AcYjFK3a.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\PJac0SY+.gz
@@ -620,7 +617,6 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\SxvVZWQ2.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\96oVuZwL.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\c1Wtbc3z.gz
-C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\+icLO4ue.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\PJBJUC3c.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\iVEE2syx.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\j3kcNuic.gz
@@ -853,3 +849,11 @@ C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\g3kFaDNb.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\43tkKqOo.gz
 C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\CdjDDCbv.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\Aj4CAOGi.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\eGMYE7Hx.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\0Rhd9l+L.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\cMAaopX9.gz
+C:\Users\Rositsa Ruseva\HiddenVilla\HiddenVilla_Client\obj\Debug\net6.0\build-gz\Zk20R7bT.gz
