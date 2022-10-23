@@ -38,14 +38,29 @@ namespace HiddenVilla_Client.Service
             }
         }
 
-        public Task Logout()
+        public async Task Logout()
         {
-            throw new NotImplementedException();
+            await _localStorage.RemoveItemAsync(SD.Local_Token);
+            await _localStorage.RemoveItemAsync(SD.Local_UserDetails);
+            _httpClient.DefaultRequestHeaders.Authorization = null;
         }
 
-        public Task<RegistrationResponseDto> RegisterUser(UserRequestDto userForRegistration)
+        public async Task<RegistrationResponseDto> RegisterUser(UserRequestDto userForRegistration)
         {
-            throw new NotImplementedException();
+            var content = JsonConvert.SerializeObject(userForRegistration);
+            var bodyContent = new StringContent(content, Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync("api/account/signup", bodyContent);
+            var contentTemp = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<RegistrationResponseDto>(contentTemp);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return new RegistrationResponseDto { IsRegistrationSuccessful = true };
+            }
+            else
+            {
+                return result;
+            }
         }
     }
 }

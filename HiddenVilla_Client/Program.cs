@@ -18,4 +18,6 @@ builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
 builder.Services.AddScoped<IHotelRoomService, HotelRoomService>();
 builder.Services.AddScoped<IRoomOrderDetailsService, RoomOrderDetailsService>();
 builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
 await builder.Build().RunAsync();
