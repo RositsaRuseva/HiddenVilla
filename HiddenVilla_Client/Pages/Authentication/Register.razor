@@ -1,5 +1,8 @@
 ﻿@page "/register"
 
+@inject IAuthenticationService authenticationService
+@inject NavigationManager navigationManager
+
 <EditForm Model="userForRegistration" OnValidSubmit="RegisterUser" class="pt-4">
     <div class="py-4">
         <div class="row form-group">
@@ -72,6 +75,19 @@
 
     private async Task RegisterUser()
     {
-        
+        ShowRegistrationErrors = false;
+        IsProcessing = true;
+        var result = await authenticationService.RegisterUser(userForRegistration);
+        if (result.IsRegistrationSuccessful)
+        {
+            IsProcessing = false;
+            navigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            IsProcessing = false;
+            Errors = result.Errors;
+            ShowRegistrationErrors = true;
+        }
     }
 }
